@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: com.boardgame
+---
+testFramework: spock
+sourceLanguage: groovy
