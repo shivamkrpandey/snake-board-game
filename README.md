@@ -8,8 +8,15 @@ Link: https://micronaut.io/
 Source code: Java 1.8
 Test cases: Groovy 2.4
 
+### IDE Used:
+- IntelliJ IDEA
+
+### Code
+Source code can be found at: `snake-board-game/src/main/java/`
+Test cases can be found at: `snake-board-game/src/test/java`
+
 ### Useful Info to run the app:
-1. Install the Java 1.8 and micronaut 1.0.3
+1. Install the Java 1.8, micronaut 1.0.3 and gradle 4.5
 2. To run the application: `./gradlew run`
 3. A POST request on `http://localhost:8080/play` with the JSON body as
 
