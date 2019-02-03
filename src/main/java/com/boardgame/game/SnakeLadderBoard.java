@@ -62,6 +62,10 @@ public class SnakeLadderBoard implements BoardBasedGame, Rule {
         setBoard(gameBoard);
     }
 
+    public static String getGameName() {
+        return GAME_NAME;
+    }
+
     public void setBoard(HashMap<Integer, Box> board) {
         this.board = board;
     }
