@@ -43,3 +43,11 @@ Test cases can be found at: `snake-board-game/src/test/java`
 
 ### Limitation:
 - It accepts 2 <= n <=6.
+
+### Test Coverage Report
+
+![](https://github.com/shivamkrpandey/snake-board-game/blob/master/assets/test-cases.png)
+
+and the running gif of the solution:
+
+![](https://github.com/shivamkrpandey/snake-board-game/blob/master/assets/snakeladdergame.gif)
