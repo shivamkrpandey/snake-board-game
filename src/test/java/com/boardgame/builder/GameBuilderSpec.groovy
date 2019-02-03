@@ -4,6 +4,9 @@ import com.boardgame.exception.InvalidGameSelected
 import com.boardgame.game.Game
 import spock.lang.Specification
 
+/**
+ * This class contains unit test cases for {@lin GameBuilder}.
+ */
 class GameBuilderSpec extends Specification {
 
     void "test getGameBoard method is called with valid game type"() {

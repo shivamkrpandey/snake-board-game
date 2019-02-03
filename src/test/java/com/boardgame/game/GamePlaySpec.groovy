@@ -8,6 +8,9 @@ import spock.lang.Shared
 import spock.lang.Specification
 import spock.lang.Unroll
 
+/**
+ * This class contains unit test cases of {@link GamePlay}.
+ */
 class GamePlaySpec extends Specification {
     @Shared Game snakeLadderBoardGame = GameBuilder.getGameBoard(GameType.SNAKE_BOARD)
 

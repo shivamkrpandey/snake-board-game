@@ -11,6 +11,9 @@ import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
 import javax.validation.constraints.Size;
 
+/**
+ * This controller is an entry point to request with {@link CustomRequest} input format.
+ */
 @Controller("/")
 public class StartController {
 

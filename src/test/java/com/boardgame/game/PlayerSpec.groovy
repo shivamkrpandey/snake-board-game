@@ -7,6 +7,9 @@ import com.boardgame.exception.InvalidMoveException
 import spock.lang.Shared
 import spock.lang.Specification
 
+/**
+ * This class contains unit test cases of {@link Player} class move method.
+ */
 class PlayerSpec extends Specification {
 
     @Shared
