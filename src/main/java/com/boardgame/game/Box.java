@@ -1,7 +1,7 @@
 package com.boardgame.game;
 
 /**
- * It represents boxes in the board game of {@link BoardBasedGame} game. Here it represents the
+ * It represents boxes in the board game of {@link BoardBasedGame} game.
  */
 public class Box {
     private int position;
