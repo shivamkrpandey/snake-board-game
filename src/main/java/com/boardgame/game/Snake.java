@@ -1,5 +1,8 @@
 package com.boardgame.game;
 
+/**
+ * This class represents the Snake Object in {@link SnakeLadderBoard} game.
+ */
 public class Snake {
     private int start;
     private int end;

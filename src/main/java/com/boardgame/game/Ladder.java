@@ -1,5 +1,8 @@
 package com.boardgame.game;
 
+/**
+ * Represents the ladder of {@link SnakeLadderBoard} game.
+ */
 public class Ladder {
     private int start;
     private int end;

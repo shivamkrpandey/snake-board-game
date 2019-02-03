@@ -2,14 +2,16 @@ package com.boardgame.controller;
 
 import java.util.List;
 
+/**
+ * This class represents the response of the {@link CustomRequest}.
+ */
 public class CustomResponse {
-    private int total;
     private List<List<Integer>> moves;
     private String winner;
     private String errorMessage;
     private List<String> playersPosition;
 
-    CustomResponse() {
+    public CustomResponse() {
 
     }
 
@@ -43,13 +45,5 @@ public class CustomResponse {
 
     public void setMoves(List<List<Integer>> moves) {
         this.moves = moves;
-    }
-
-    public int getTotal() {
-        return total;
-    }
-
-    public void setTotal(int total) {
-        this.total = total;
     }
 }

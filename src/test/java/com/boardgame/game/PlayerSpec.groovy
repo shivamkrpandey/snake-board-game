@@ -14,7 +14,7 @@ class PlayerSpec extends Specification {
 
     void "test move method with sample inputs for a single player"() {
         given: 'An instance of player having ref to game game'
-        Player player = new Player(1, snakeLadderBoardGame)
+        Player player = new Player(1, snakeLadderBoardGame, 1)
 
         when: 'move method is called with 5'
         player.move(5)
@@ -50,7 +50,9 @@ class PlayerSpec extends Specification {
         when: 'move method called with 5 to reach 100 and win'
         player.move(5)
 
-        then: 'it should be reach to 100'
+        then: 'it should be reach to 100 and exception thrown'
+        GameEndException endException = thrown(GameEndException)
+        endException.message == 'Player 1 has won.'
         player.currentPosition == 100
         player.playerId == 1
 
@@ -58,7 +60,7 @@ class PlayerSpec extends Specification {
         player.move(5)
 
         then: 'it should throw GameEndException with message'
-        GameEndException endException = thrown(GameEndException)
-        endException.message == 'Game ended. Winner declared.'
+        GameEndException gameEndException = thrown(GameEndException)
+        gameEndException.message == 'Game ended. Winner declared.'
     }
 }

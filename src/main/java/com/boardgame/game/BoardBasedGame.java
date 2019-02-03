@@ -1,11 +1,11 @@
 package com.boardgame.game;
 
 /**
- * Each game based games should implement this interface.
+ * Each board based games should implement this interface.
  */
 interface BoardBasedGame extends Game {
     /**
-     * This method prepares the game game to play.
+     * This method prepares the game board to play.
      */
     void prepareGameBoard();
 }

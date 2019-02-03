@@ -7,11 +7,11 @@ import javax.inject.Singleton;
 import java.util.HashMap;
 
 /**
- * SnakeLadder game which is a game based game and need to implement the methods of interface.
+ * SnakeLadder game which is a {@link BoardBasedGame} and need to implement the methods of interface.
  */
 @Singleton
 public class SnakeLadderBoard implements BoardBasedGame, Rule {
-    final static String GAME_NAME = "Snake-Ladder Game";
+    private final static String GAME_NAME = "Snake-Ladder Game";
 
     // Winner declare and avoid further moves.
     private boolean hasDeclaredWinner = false;
@@ -39,9 +39,12 @@ public class SnakeLadderBoard implements BoardBasedGame, Rule {
             return true;
         }
 
-        throw new InvalidMoveException("${move} is not a valid move on ${GAME_NAME} board.");
+        throw new InvalidMoveException(move + " is not a valid move on " + GAME_NAME + " board.");
     }
 
+    /**
+     * This method prepares the SnakeLadder Board to be played the {@link Player}.
+     */
     @Override
     public void prepareGameBoard() {
         HashMap<Integer, Box> gameBoard = new HashMap<>(100);
@@ -68,6 +71,7 @@ public class SnakeLadderBoard implements BoardBasedGame, Rule {
      * @param id
      * @return
      */
+    @Override
     public Box getBoxById(int id) {
         return this.board.get(id);
     }

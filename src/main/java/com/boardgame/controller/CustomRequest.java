@@ -1,9 +1,10 @@
 package com.boardgame.controller;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
+/**
+ * This class represents the request json format.
+ */
 public class CustomRequest {
     private Integer n;
     private List<List<Integer>> firstNMoves;
@@ -13,7 +14,7 @@ public class CustomRequest {
         this.firstNMoves = firstNMoves;
     }
 
-    CustomRequest(int n, List<List<Integer>> firstNMoves, List<List<Integer>> playersMove) {
+    public CustomRequest(int n, List<List<Integer>> firstNMoves, List<List<Integer>> playersMove) {
         this.n = n;
         this.firstNMoves = firstNMoves;
         this.playersMove = playersMove;
@@ -48,7 +49,7 @@ public class CustomRequest {
     }
 
     public boolean validateRequest() {
-        checkArgument(this.n < 2 && this.n <=6, "This game cannot be played with less than 2 and max 6 players.");
+        checkArgument(this.n < 2 || this.n > 6, "This game cannot be played with less than 2 and max 6 players.");
         checkArgument(this.firstNMoves.size() != this.n, "Please provide first turn of all the players");
 
         checkArgument(this.playersMove != null && this.playersMove.size() == 0, "Please provide moves of each player.");
