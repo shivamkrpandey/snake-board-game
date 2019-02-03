@@ -1,0 +1,8 @@
+micronaut:
+   application:
+       name: snake-board
+   codec:
+      json:
+        additionalTypes:
+          - text/javascript
+          - application/json
