@@ -1,8 +1,6 @@
 ### Framework used:
-Source: Micronaut 1.0.3, A JVM based fullstack framework has been used to build this application.
-Unit test: Spock
-
-Link: https://micronaut.io/
+Source: Micronaut 1.0.3 (https://micronaut.io/), A JVM based fullstack framework has been used to build this application.
+Unit test: Spock (http://spockframework.org/)
 
 ### Languages used: 
 Source code: Java 1.8
