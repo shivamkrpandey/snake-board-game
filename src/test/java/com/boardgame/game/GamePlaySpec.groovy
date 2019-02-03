@@ -54,4 +54,16 @@ class GamePlaySpec extends Specification {
         where: 'Values of givenN is following.'
         givenN << [100, 50, 1000]
     }
+
+    void "test start method with invalid CustomRequest input combination in the players move"() {
+        given: 'A invalid instance of CustomRequest'
+        CustomRequest customRequest = new CustomRequest(2, [[1, 6], [2, 3]], [[1], [2, 6]])
+
+        when: 'start method is called with customRequest'
+        new GamePlay().start(customRequest, snakeLadderBoardGame)
+
+        then: 'It should throw IllegalArgumentException with message'
+        IllegalArgumentException exception = thrown()
+        exception.message == 'The input set for moves can contain two length input of numbers only.'
+    }
 }
